@@ -10,15 +10,15 @@ axios.interceptors.request.use(request => {
     console.log(request);
     return request; // must return otherwise it will block
 }, error => {
-    console.log(error);
+    console.error(error);
     return Promise.reject(error);
 });
 
-axios.interceptors.response.use(request => {
-    console.log(request);
-    return request; // must return otherwise it will block
+axios.interceptors.response.use(response => {
+    console.log(response);
+    return response; // must return otherwise it will block
 }, error => {
-    console.log(error);
+    console.error(error);
     return Promise.reject(error);
 });
 
