@@ -41,25 +41,25 @@ class App extends Component {
       <div >
         <h1>Default COE view</h1>
         
-        <div className="dropdown">
-          <button >Select Year</button>
-          <div className="dropdown-content">
-            <a href="#">2021-22</a>
-            <a href="#">2020-21</a>
-            <a href="#">2019-20</a>
-          </div>
+        <div className="main-selection">
+          <select className="dropdown">
+            <option>Select Year</option>
+            <option>2021-22</option>
+            <option>2020-21</option>
+            <option>2019-20</option>
+          </select>
         </div>
 
-        <div className="dropdown">
-          <button >Select Cycle</button>
-          <div className="dropdown-content">
-            <a href="#">Jan-Mar</a>
-            <a href="#">Apr-Jun</a>
-            <a href="#">Jul-Sep</a>
-            <a href="#">Oct-Dec</a>
-            <a href="#">Apr</a>
-            <a href="#">Oct</a>
-          </div>
+        <div className="main-selection">
+          <select className="dropdown">
+            <option>Select Cycle</option>
+            <option>Jan-Mar</option>
+            <option>Apr-Jun</option>
+            <option>Jul-Sep</option>
+            <option>Oct-Dec</option>
+            <option>Apr</option>
+            <option>Oct</option>
+          </select>
         </div>
 
         <button className="list">List Employees</button>
