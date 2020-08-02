@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Employee from "../Employee/Employee.js";
 import { Link } from "react-router-dom";
+import DefaultDisplay from "../DefaultDisplay/DefaultDisplay.js";
 
 class Employees extends Component {
     state = {
@@ -38,6 +39,7 @@ class Employees extends Component {
 
         return (
             <div>
+                <DefaultDisplay/>
                 {eachEmployee}
             </div>
         );
