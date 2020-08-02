@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
-import axios from "axios"
+import axios from "axios";
+import { Link } from "react-router-dom";
+import "../App.css";
 
 class QuartersDisplay extends Component {
     state = {
         allQuarters: null
     }
 
-    componentDidUpdate () {
-        if(this.props.id){
-            if(!this.state.allQuarters || (this.state.allQuarters && this.state.allQuarters.id !== this.props.id)) {
-                axios.get("https://jsonplaceholder.typicode.com/users/" + this.props.id)
+    //changed to componentDidMount instead of ComponentDidUpdate
+    //not updating now, instead it is added/removed from the DOM
+    componentDidMount () {
+        if(this.props.match.params.eachId){
+            if(!this.state.allQuarters || (this.state.allQuarters && this.state.allQuarters.id !== this.props.match.params.eachId)) {
+                axios.get("https://jsonplaceholder.typicode.com/users/" + this.props.match.params.eachId)
                     .then((response) => {
                         this.setState({allQuarters: response.data});
                     });
@@ -18,7 +22,7 @@ class QuartersDisplay extends Component {
     }
 
     render() {
-        if (this.props.id && this.state.allQuarters) {
+        if (this.props.match.params.eachId && this.state.allQuarters) {
             const style = {
                 backgroundColor: "lavender",
                 border: "2px solid lavender",
@@ -30,6 +34,8 @@ class QuartersDisplay extends Component {
             
             return(
                 <div>
+                    <br/>
+                    <button><Link to = "/">⇐ Default COE view</Link></button>
                     <div className = "row">
                         <div className="column">Quarter</div>
                         <div className="column">Name</div>
