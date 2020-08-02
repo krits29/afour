@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../App.css";
+import Collapsible from "react-collapsible";
 
 class QuartersDisplay extends Component {
     state = {
@@ -25,11 +26,13 @@ class QuartersDisplay extends Component {
         if (this.props.match.params.eachId && this.state.allQuarters) {
             const style = {
                 backgroundColor: "lavender",
-                border: "2px solid lavender",
+                border: "2px solid lightgray",
                 width: "auto",
                 height: "auto",
                 clear: "both",
-                color: "#333333"
+                color: "#333333",
+                cursor: "pointer",
+                fontWeight: "lighter"
             };
             
             return(
@@ -40,14 +43,19 @@ class QuartersDisplay extends Component {
                         <div className="column">Quarter</div>
                         <div className="column">Name</div>
                         <div className="column">Rating</div>
+                        <div className="column" style = {{textDecoration: "underline", fontWeight: "lighter"}}>Avg Rating: {this.state.allQuarters.address.zipcode}</div>
                     </div>
-                    <div>Avg Rating: {this.state.allQuarters.address.zipcode}</div>
-                    <hr/>
-                    <div style = {style}>
-                        <p className = "column">{this.state.allQuarters.address.suite}</p>
-                        <p className = "column">{this.state.allQuarters.name}</p>
-                        <p className = "column">{this.state.allQuarters.address.zipcode}</p>
-                    </div>
+                    <br/>
+                    <br/>
+                    <Collapsible trigger = {
+                        <div style = {style} className = "row">
+                            <p className = "column">{this.state.allQuarters.address.suite}</p>
+                            <p className = "column">{this.state.allQuarters.name}</p>
+                            <p className = "column">{this.state.allQuarters.address.zipcode}</p>
+                        </div>
+                    }>
+                        <h1>Working! Need to style it now...</h1>
+                    </Collapsible>
                 </div>
             );
         }

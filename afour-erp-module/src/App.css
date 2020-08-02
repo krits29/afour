@@ -28,12 +28,18 @@ h1 {
 
 .column {
   float: left;
-  width: 22%;
+  width: 21%;
   margin: 20px;
 }
 
 .row {
   font-weight: bold;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 select {
