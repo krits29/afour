@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../App.css";
 import Collapsible from "react-collapsible";
+import IndividualDisplay from '../IndividualDisplay/IndividualDisplay';
 
 class QuartersDisplay extends Component {
     state = {
@@ -32,13 +33,13 @@ class QuartersDisplay extends Component {
                 clear: "both",
                 color: "#333333",
                 cursor: "pointer",
-                fontWeight: "lighter"
+                fontWeight: "normal"
             };
             
             return(
                 <div>
                     <br/>
-                    <button><Link to = "/">⇐ Default COE view</Link></button>
+                    <button><Link to = "/list-employees">⇐ Default COE view</Link></button>
                     <div className = "row">
                         <div className="column">Quarter</div>
                         <div className="column">Name</div>
@@ -54,7 +55,38 @@ class QuartersDisplay extends Component {
                             <p className = "column">{this.state.allQuarters.address.zipcode}</p>
                         </div>
                     }>
-                        <h1>Working! Need to style it now...</h1>
+                        <h1>Collapsible! Third view comes here</h1>
+                        <IndividualDisplay/>
+                    </Collapsible>
+                    <Collapsible trigger = {
+                        <div style = {style} className = "row">
+                            <p className = "column">{this.state.allQuarters.address.suite}</p>
+                            <p className = "column">{this.state.allQuarters.name}</p>
+                            <p className = "column">{this.state.allQuarters.address.zipcode}</p>
+                        </div>
+                    }>
+                        <h1>Collapsible! Third view comes here</h1>
+                        <IndividualDisplay/>
+                    </Collapsible>
+                    <Collapsible trigger = {
+                        <div style = {style} className = "row">
+                            <p className = "column">{this.state.allQuarters.address.suite}</p>
+                            <p className = "column">{this.state.allQuarters.name}</p>
+                            <p className = "column">{this.state.allQuarters.address.zipcode}</p>
+                        </div>
+                    }>
+                        <h1>Collapsible! Third view comes here</h1>
+                        <IndividualDisplay/>
+                    </Collapsible>
+                    <Collapsible trigger = {
+                        <div style = {style} className = "row">
+                            <p className = "column">{this.state.allQuarters.address.suite}</p>
+                            <p className = "column">{this.state.allQuarters.name}</p>
+                            <p className = "column">{this.state.allQuarters.address.zipcode}</p>
+                        </div>
+                    }>
+                        <h1>Collapsible! Third view comes here</h1>
+                        <IndividualDisplay/>
                     </Collapsible>
                 </div>
             );

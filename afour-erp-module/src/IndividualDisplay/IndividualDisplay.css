@@ -1,0 +1,38 @@
+.tab {
+    overflow: hidden;
+    border: 1px solid lightgray;
+    background-color: whitesmoke;
+    margin: 0px 0px 0px 20px;
+    width: 704px;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+  border-bottom: 1.5px solid darkgray;
+  padding-bottom: 4px;
+}
+
+button:active {
+  background-color: lightgray;
+}
+
+.nocontent {
+  display: none;
+}
+
+.showcontent { 
+  display: block;
+  padding: 6px 12px;
+  margin: 0px 0px 10px 20px;
+  width: 680px;
+  border: 1px solid lightgray;
+  border-top: none;
+}
