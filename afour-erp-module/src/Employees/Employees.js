@@ -12,7 +12,7 @@ class Employees extends Component {
 
     //using componentDidMount for retrieving http request
     componentDidMount() {
-    axios.get("https://jsonplaceholder.typicode.com/users")
+    axios.get("https://jsonplaceholder.typicode.com/users/") //  http://localhost:8000/api/employees?coe_id=AFTC0629 
         .then(response => {
           this.setState({employees: response.data}) //data holds an array of employees
         });
@@ -28,9 +28,12 @@ class Employees extends Component {
             <Link to = {"/employeeid=" + each.id} key = {each.id}>
               <Employee 
                 id = {each.id} 
-                name = {each.name} 
-                manager = {each.username} 
+                name = {each.name}
+                //name = {each.first_name + " " + each.last_name} 
+                manager = {each.username}
+                //manager = {each.manager_name} 
                 status = "Complete"
+                //status = {each.service_status}
                 clicked = {() => {this.clickedEmployeeHandler(each.id)}}
               />
             </Link>
