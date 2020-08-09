@@ -35,10 +35,14 @@ class QuartersDisplay extends Component {
             fontWeight: "normal"
         };
 
+        let avgOverallRating = [0, 0];
+
         const eachQuarter = this.state.allQuarters.map((each) => {
 
             const avgQuarterRating = parseFloat(parseInt(each.manager_hard_skills_ratings) + parseInt(each.manager_soft_skills_ratings) + parseInt(each.manager_value_addition_ratings) + parseInt(each.manager_up_learning_ratings))/4; 
-      
+            avgOverallRating[0] += avgQuarterRating;
+            avgOverallRating[1] ++;
+
             return (
                 <Collapsible key = {each.employee_id} trigger = {
                     <div style = {style} className = "row">
@@ -64,7 +68,9 @@ class QuartersDisplay extends Component {
                         <div className="column">Quarter</div>
                         <div className="column">Name</div>
                         <div className="column">Rating</div>
-                        <div className="column" style = {{textDecoration: "underline", fontWeight: "lighter"}}>Avg Rating: {this.state.allQuarters.workflow_status}</div>
+                        <div className="column" style = {{textDecoration: "underline", fontWeight: "lighter"}}>
+                            Avg Rating: {avgOverallRating[0]/avgOverallRating[1]}
+                        </div>
                     </div>
                     <br/>
                     <br/>
