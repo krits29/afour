@@ -11,8 +11,8 @@ class Employees extends Component {
     };
 
     //using componentDidMount for retrieving http request
-    componentDidMount() {
-    axios.get("http://localhost:8000/api/employees?coe_id=AFTC0629") // https://jsonplaceholder.typicode.com/users/
+    componentDidMount() { //?coe_id=AFTC0629
+    axios.get("http://localhost:8000/api/employees") // https://jsonplaceholder.typicode.com/users/
         .then(response => {
           this.setState({employees: response.data}) //data holds an array of employees
         });

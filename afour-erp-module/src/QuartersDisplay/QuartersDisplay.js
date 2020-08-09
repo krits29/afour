@@ -36,12 +36,15 @@ class QuartersDisplay extends Component {
         };
 
         const eachQuarter = this.state.allQuarters.map((each) => {
+
+            const avgQuarterRating = parseFloat(parseInt(each.manager_hard_skills_ratings) + parseInt(each.manager_soft_skills_ratings) + parseInt(each.manager_value_addition_ratings) + parseInt(each.manager_up_learning_ratings))/4; 
+      
             return (
-                <Collapsible trigger = {
+                <Collapsible key = {each.employee_id} trigger = {
                     <div style = {style} className = "row">
                         <p className = "column">{each.qms_id}</p>
                         <p className = "column">{each.first_name + " " + each.last_name}</p>
-                        <p className = "column">{each.manager_hard_skills_ratings}</p>
+                        <p className = "column">{avgQuarterRating}</p>
                     </div>
                 }>
                     <h1>Collapsible! Third view comes here</h1>
