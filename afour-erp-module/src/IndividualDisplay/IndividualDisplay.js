@@ -3,7 +3,7 @@ import './IndividualDisplay.css';
 
 class IndividualDisplay extends Component {
     state = {
-        showSoft: false,
+        showSoft: true,
         showHard: false,
         showValue: false,
         showUp: false
