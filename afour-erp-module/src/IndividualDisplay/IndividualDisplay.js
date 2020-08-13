@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './IndividualDisplay.css';
 
+//msterial-ui.com
+
 class IndividualDisplay extends Component {
     state = {
         showSoft: true,
@@ -14,12 +16,6 @@ class IndividualDisplay extends Component {
         this.setState({showHard: false});
         this.setState({showValue: false});
         this.setState({showUp: false});
-        // this.setState({
-        //     showSoft: false,
-        //     showHard: false,
-        //     showValue: false,
-        //     showUp: false
-        // }, toggleTab);
     }
 
     toggleSoftHandler = () => {
@@ -55,21 +51,25 @@ class IndividualDisplay extends Component {
 
                 <div id="Soft" className={this.state.showSoft ? "showcontent" : "nocontent"}>
                     <h3>Soft Skills Comments</h3>
+                    <div style={{color: "red", border: "1px solid red", padding: "4px", width: "10px"}}>{this.props.softRatings}</div>
                     <p>{this.props.softComments}</p>
                 </div>
 
                 <div id="Hard" className={this.state.showHard ? "showcontent" : "nocontent"}>
                     <h3>Hard Skills Comments</h3>
+                    <div style={{color: "red", border: "1px solid red", padding: "4px", width: "10px"}}>{this.props.hardRatings}</div>
                     <p>{this.props.hardComments}</p>
                 </div>
 
                 <div id="Value" className={this.state.showValue ? "showcontent" : "nocontent"}>
                     <h3>Value Addition Comments</h3>
+                    <div style={{color: "red", border: "1px solid red", padding: "4px", width: "10px"}}>{this.props.valueRatings}</div>
                     <p>{this.props.valueComments}</p>
                 </div>
 
                 <div id="Up" className={this.state.showUp ? "showcontent" : "nocontent"}>
-                    <h3>Up Learning Comments</h3>
+                    <h3>Up Learning Comments - {this.props.upRatings}</h3>
+                    <div style={{color: "red", border: "1px solid red", padding: "4px", width: "12px"}}>{this.props.upRatings}</div>
                     <p>{this.props.upComments}</p>
                 </div>
             </div>

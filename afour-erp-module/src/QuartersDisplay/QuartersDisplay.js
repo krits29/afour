@@ -57,6 +57,11 @@ class QuartersDisplay extends Component {
                         hardComments = {each.manager_hard_skills_comments}
                         valueComments = {each.manager_value_addition_comments}
                         upComments = {each.manager_up_learning_comments}
+
+                        softRatings = {each.manager_soft_skills_ratings}
+                        hardRatings = {each.manager_hard_skills_ratings}
+                        valueRatings = {each.manager_value_addition_ratings}
+                        upRatings = {each.manager_up_learning_ratings}
                     />
                 </Collapsible>
             )
