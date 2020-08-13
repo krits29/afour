@@ -12,7 +12,7 @@ class Employees extends Component {
 
     //using componentDidMount for retrieving http request
     componentDidMount() { //?coe_id=AFTC0629
-    axios.get("http://localhost:8000/api/employees") // https://jsonplaceholder.typicode.com/users/
+    axios.get("http://localhost:8000/api/employees?") // https://jsonplaceholder.typicode.com/users/
         .then(response => {
           this.setState({employees: response.data}) //data holds an array of employees
         });

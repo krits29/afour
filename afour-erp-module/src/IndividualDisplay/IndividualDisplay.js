@@ -54,23 +54,23 @@ class IndividualDisplay extends Component {
                 </div>
 
                 <div id="Soft" className={this.state.showSoft ? "showcontent" : "nocontent"}>
-                    <h3>1. Call from API - Soft Skills</h3>
-                    <p>Comments here.</p>
+                    <h3>Soft Skills Comments</h3>
+                    <p>{this.props.softComments}</p>
                 </div>
 
                 <div id="Hard" className={this.state.showHard ? "showcontent" : "nocontent"}>
-                    <h3>2. Call from API - Hard Skills</h3>
-                    <p>Comments here.</p>
+                    <h3>Hard Skills Comments</h3>
+                    <p>{this.props.hardComments}</p>
                 </div>
 
                 <div id="Value" className={this.state.showValue ? "showcontent" : "nocontent"}>
-                    <h3>3. Call from API - Value Addition</h3>
-                    <p>Comments here.</p>
+                    <h3>Value Addition Comments</h3>
+                    <p>{this.props.valueComments}</p>
                 </div>
 
                 <div id="Up" className={this.state.showUp ? "showcontent" : "nocontent"}>
-                    <h3>4. Call from API - Up Learning</h3>
-                    <p>Comments here.</p>
+                    <h3>Up Learning Comments</h3>
+                    <p>{this.props.upComments}</p>
                 </div>
             </div>
         );

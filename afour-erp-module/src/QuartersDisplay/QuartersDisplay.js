@@ -46,13 +46,18 @@ class QuartersDisplay extends Component {
             return (
                 <Collapsible key = {each.employee_id} trigger = {
                     <div style = {style} className = "row">
-                        <p className = "column">{each.qms_id}</p>
+                        <p className = "column">{each.qms_id.substring(4, 11) + "  " + each.qms_id.substring(12)}</p>
                         <p className = "column">{each.first_name + " " + each.last_name}</p>
                         <p className = "column">{avgQuarterRating}</p>
                     </div>
                 }>
                     <h1>Collapsible! Third view comes here</h1>
-                    <IndividualDisplay/>
+                    <IndividualDisplay
+                        softComments = {each.manager_soft_skills_comments}
+                        hardComments = {each.manager_hard_skills_comments}
+                        valueComments = {each.manager_value_addition_comments}
+                        upComments = {each.manager_up_learning_comments}
+                    />
                 </Collapsible>
             )
         });
