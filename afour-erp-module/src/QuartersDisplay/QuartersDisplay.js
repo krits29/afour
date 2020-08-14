@@ -78,7 +78,7 @@ class QuartersDisplay extends Component {
                         <div className="column">Quarter</div>
                         <div className="column">Name</div>
                         <div className="column">Rating</div>
-                        <div className="column" style = {{textDecoration: "underline", fontWeight: "lighter"}}>
+                        <div className="column" style = {{textDecoration: "underline", color: "rgb(125, 125, 190)", border: "1.3px solid rgb(125, 125, 190)", padding: "9px", width: "130px",textDecoration: "bold", boxShadow: "-2px -2px 8px 2px lavender"}}>
                             Avg Rating: {avgOverallRating[0]/avgOverallRating[1]}
                         </div>
                     </div>

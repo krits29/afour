@@ -40,6 +40,15 @@ class IndividualDisplay extends Component {
 
     render() {
 
+    const style = {
+        color: "rgb(125, 125, 190)", 
+        border: "1px solid rgb(125, 125, 190)", 
+        padding: "9px", 
+        width: "10px",
+        textDecoration: "bold",
+        boxShadow: "-2px -2px 8px 2px lavender"
+    }
+
         return(
             <div>
                 <div className = "tab">
@@ -51,25 +60,25 @@ class IndividualDisplay extends Component {
 
                 <div id="Soft" className={this.state.showSoft ? "showcontent" : "nocontent"}>
                     <h3>Soft Skills Comments</h3>
-                    <div style={{color: "rgb(125, 125, 190)", border: "1px solid rgb(125, 125, 190)", padding: "4px", width: "10px"}}>{this.props.softRatings}</div>
+                    <div style={style}>{this.props.softRatings}</div>
                     <p>{this.props.softComments}</p>
                 </div>
 
                 <div id="Hard" className={this.state.showHard ? "showcontent" : "nocontent"}>
                     <h3>Hard Skills Comments</h3>
-                    <div style={{color: "rgb(125, 125, 190)", border: "1px solid rgb(125, 125, 190)", padding: "4px", width: "10px"}}>{this.props.hardRatings}</div>
+                    <div style={style}>{this.props.hardRatings}</div>
                     <p>{this.props.hardComments}</p>
                 </div>
 
                 <div id="Value" className={this.state.showValue ? "showcontent" : "nocontent"}>
                     <h3>Value Addition Comments</h3>
-                    <div style={{color: "rgb(125, 125, 190)", border: "1px solid rgb(125, 125, 190)", padding: "4px", width: "10px"}}>{this.props.valueRatings}</div>
+                    <div style={style}>{this.props.valueRatings}</div>
                     <p>{this.props.valueComments}</p>
                 </div>
 
                 <div id="Up" className={this.state.showUp ? "showcontent" : "nocontent"}>
                     <h3>Up Learning Comments</h3>
-                    <div style={{color: "rgb(125, 125, 190)", border: "1px solid rgb(125, 125, 190)", padding: "4px", width: "12px"}}>{this.props.upRatings}</div>
+                    <div style={style}>{this.props.upRatings}</div>
                     <p>{this.props.upComments}</p>
                 </div>
             </div>
