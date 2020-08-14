@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './IndividualDisplay.css';
 
-//msterial-ui.com
+//material-ui.com
 
 class IndividualDisplay extends Component {
     state = {
@@ -51,25 +51,25 @@ class IndividualDisplay extends Component {
 
                 <div id="Soft" className={this.state.showSoft ? "showcontent" : "nocontent"}>
                     <h3>Soft Skills Comments</h3>
-                    <div style={{color: "red", border: "1px solid red", padding: "4px", width: "10px"}}>{this.props.softRatings}</div>
+                    <div style={{color: "rgb(125, 125, 190)", border: "1px solid rgb(125, 125, 190)", padding: "4px", width: "10px"}}>{this.props.softRatings}</div>
                     <p>{this.props.softComments}</p>
                 </div>
 
                 <div id="Hard" className={this.state.showHard ? "showcontent" : "nocontent"}>
                     <h3>Hard Skills Comments</h3>
-                    <div style={{color: "red", border: "1px solid red", padding: "4px", width: "10px"}}>{this.props.hardRatings}</div>
+                    <div style={{color: "rgb(125, 125, 190)", border: "1px solid rgb(125, 125, 190)", padding: "4px", width: "10px"}}>{this.props.hardRatings}</div>
                     <p>{this.props.hardComments}</p>
                 </div>
 
                 <div id="Value" className={this.state.showValue ? "showcontent" : "nocontent"}>
                     <h3>Value Addition Comments</h3>
-                    <div style={{color: "red", border: "1px solid red", padding: "4px", width: "10px"}}>{this.props.valueRatings}</div>
+                    <div style={{color: "rgb(125, 125, 190)", border: "1px solid rgb(125, 125, 190)", padding: "4px", width: "10px"}}>{this.props.valueRatings}</div>
                     <p>{this.props.valueComments}</p>
                 </div>
 
                 <div id="Up" className={this.state.showUp ? "showcontent" : "nocontent"}>
-                    <h3>Up Learning Comments - {this.props.upRatings}</h3>
-                    <div style={{color: "red", border: "1px solid red", padding: "4px", width: "12px"}}>{this.props.upRatings}</div>
+                    <h3>Up Learning Comments</h3>
+                    <div style={{color: "rgb(125, 125, 190)", border: "1px solid rgb(125, 125, 190)", padding: "4px", width: "12px"}}>{this.props.upRatings}</div>
                     <p>{this.props.upComments}</p>
                 </div>
             </div>
